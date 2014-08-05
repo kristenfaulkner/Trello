@@ -1,0 +1,56 @@
+
+<h1 class='signin-header'>Sign In</h1>
+<div class= "sign-in-page">
+<div class="sign-in">
+<form action="/session"
+      method="post"
+      role="form"
+      id="sign-in">
+  <input
+     name="authenticity_token"
+     type="hidden"
+     value="<%= form_authenticity_token %>">
+<div class="form-group">
+  <label for="user_email">Email &nbsp &nbsp &nbsp</label>
+  <input
+     id="user_email"
+     name="user[email]"
+     type="text"
+     Placeholder="email"
+     class="myclass">
+  <br>
+</div>
+<div class="form-group">
+  <label for="user_password">Password</label>
+  <input
+     id="user_password"
+     name="user[password]"
+     type="password"
+     Placeholder="password"
+     class="myclass">
+   </div>
+  <br>
+
+  <button type="submit" class="btn btn-success" role="button" id="sign-in-button">Sign In</button>
+</form>
+
+
+
+ <form action="<%= session_url %>"
+      method="post"
+      role="form"
+      id="sign-in-guest">
+  <input
+     name="authenticity_token"
+     type="hidden"
+     value="<%= form_authenticity_token %>">
+
+  <input name="user[email]" type="hidden" value="guestlogin">
+  <input name="user[password]" type="hidden" value="guestlogin">
+  <button type="submit" class="btn btn-primary" role="button" id="sign-in-guest-button">Guest Demo</button>
+</form>
+  <div class="sign-up-footer">
+      Not yet a user?<a href="<%= new_user_url %>"> Sign Up </a>
+  </div>
+</div>
+</div>

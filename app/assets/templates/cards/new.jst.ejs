@@ -1,0 +1,144 @@
+<% var message; %>
+<% (card.get('id')) ? message = "Edit Card" : message = "Add a new Card"%>
+
+<div class="new-card-form">
+  <div class="modal fade"
+       id="myModal"
+       tabindex="-1"
+       role="dialog"
+       aria-labelledby="myModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!--Modal header-->
+        <div class="modal-header">
+          <button type="button"
+            class="close"
+            data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h3 class="modal-title" id="myModalLabel"><%= message%></h3>
+        </div>
+
+          <!--Modal Body-->
+        <div class="modal-body">
+
+          <!-- Start of Form-->
+          <form role="form" class="form-horizontal new-form">
+
+            <!--Get Title-->
+            <div class="form-group">
+              <label for="card-title" class="control-label col-xs-2">Title</label>
+              <div class="col-xs-10">
+                <input type="text"
+                class="form-control"
+                name="card[title]"
+                value="<%=card.get('title')%>"
+                Placeholder="Card name..."
+                id="card-title">
+              </div>
+            </div>
+
+              <!--Get Description-->
+            <div class="form-group">
+              <label for="card-title"
+                     class="control-label col-xs-2">
+                     Description
+              </label>
+              <div class="col-xs-10">
+                <textarea
+                  input type="text"
+                  class="form-control"
+                  name="card[description]"
+                  Placeholder="Description..."
+                  value="<%=card.get('description')%>"
+                  id="card-description">
+                </textarea>
+              </div>
+            </div>
+
+            <!-- Order -->
+
+            <div class="form-group get-ord">
+              <label for="card-order" class="control-label col-xs-2">
+                Priority Order
+              </label>
+              <div class="col-xs-10">
+                <input type="number"
+                       min="0" max="100" step="1"
+                       Placeholder="1"
+                       class="form-control"
+                       name="card[ord]"
+                       value= "<%=card.get('ord')%>"
+                       id="card-order">
+              </div>
+            </div>
+
+            <!--Checkbox in the model-->
+            <!-- <br>
+            <div id="card-checklist">
+              <strong>Checklist<strong>
+              <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="card[items][completed]">
+                      Completed
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name=card[items][urgent]>
+                      Urgent
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+<!-- <div>
+  <button id="addMoreChecks" class="btn">Create More Checks</button>
+      <input type="text"
+      value=""
+      Placeholder="Checkbox name..."
+      id="addChecksInput">
+
+  </div -->
+
+            <!--Footer-->
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+
+
+      <!--Add new Checkbox -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+                  <!-- Upload a file
+                  <div class="upload-file form-group">
+                    <label for="uploadFile" class="control-label col-xs-2">Upload a file
+                    </label>
+                    <div class="col-xs-10">
+                      <input type="file" id="uploadFile">
+                    </div>
+                  </div>  -->

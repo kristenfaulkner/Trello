@@ -1,0 +1,62 @@
+<div class="data-storage" data-list-id="<%=list.escape('id')%>">
+<div class="tab-header">
+   <%=list.escape('title')%>
+
+
+<div class="collapse navbar-collapse pull-right">
+  <!-- dropdown button-->
+  <div class="dropdown pull-right">
+    <button class="btn btn-default dropdown-toggle"
+            type="button"
+            id="list-drop-down"
+            data-toggle="dropdown">
+            <span class="caret"></span>
+    </button>
+
+    <!-- items in the dropdown-->
+     <ul class="dropdown-menu"
+        role="menu"
+        aria-labelledby="dropdownMenu2">
+      <li>
+        <button type="button"
+                class="delete-list btn btn-link"
+                role="button">
+                <span class="glyphicon glyphicon-trash">
+                </span> Delete List
+        </button>
+      </li>
+      <li>
+        <button type="button"
+                class="add-card btn btn-link"
+                data-toggle="modal"
+                data-target="#myModal"
+                role="button">+Add Card
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+
+            <!-- <p class="add-remove-buttons">
+              <button type="button"
+                      class="delete-list btn btn-link"
+                      role="button">
+                      <span class="glyphicon glyphicon-trash">
+                      </span> Delete List</button>
+              <button type="button"
+                      class="add-card btn btn-link"
+                      data-toggle="modal"
+                      data-target="#myModal"
+                      role="button">+Add Card</button>
+            </p> -->
+
+
+
+
+<div class="card-new"></div>
+
+<div class="cards"></div>
+
+<div class="add-card"></div>

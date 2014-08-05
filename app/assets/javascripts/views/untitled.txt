@@ -1,0 +1,1 @@
+//not removing subsets (when a board is destroyed, its lists are not)

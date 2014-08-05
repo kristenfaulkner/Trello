@@ -1,0 +1,356 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.ui.all
+ *= require_tree .
+ */
+
+@import "bootstrap";
+@import "font-awesome";
+
+#main {
+
+  width: 80%;
+}
+.boards {
+  margin-top: 40px
+}
+body {
+  padding-top: 50px;
+  //font-family: "proxima nova";
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+  background-color: #256a92;
+  color: white;
+//  background-color: #2F4F4F;
+//  color: white;
+}
+
+.backlink {
+  color: white;
+}
+.view-board, .delete-board {
+  margin-left: 20px;
+}
+.add-remove-buttons {
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-height: 25px;
+}
+
+.cards {
+  min-height: 200px;
+}
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+.list-box {
+  min-height: 500px;
+  // border: solid gray;
+//  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  //  background-color: #ccd6dd;
+  background-color: #D3D3D3;
+  // background-color: #D0D0DD ;
+  color: black;
+  width: 340px;
+}
+
+.nav-links > li {
+  padding: 0px 20px;
+}
+a.navbar-link {
+  font-size: large;
+  margin-top: 7px;
+
+}
+.list-caret {
+  position: absolute;
+  top: 2%;
+  left: 92%;
+  font-size: x-large;
+}
+
+.all-lists {
+  margin-top: 20px;
+  color: black;
+  width: 100%;
+  padding: none;
+
+}
+
+
+// .checkbox-label {
+//     width: 70%;
+//     text-align: left;
+//     margin-left: 10px;
+// }
+
+.upload-file, .get-ord {
+  margin-left: 20px;
+}
+
+.new-list-form {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: white;
+
+}
+
+#card-input-title {
+  color: black;
+}
+
+.new-board-form {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.listShowOne {
+  align: center;
+  background-color: gray;
+}
+
+
+.card-box {
+    border-radius: 8px;
+     height: auto;
+     align: center;
+     text-align: center;
+     background-color: white;
+     color: black;
+     font-size: medium;
+     padding: 10px;
+}
+
+.card-box:hover .delete-card, .card-box:hover .edit-card{
+  visibility: visible;;
+}
+
+.card-box:hover {
+  background-color: #FFFF99;
+}
+
+.card-with-x {
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+  align: center;
+}
+
+.edit-card {
+  visibility: hidden;
+  margin: 10px;
+  float: right;
+}
+
+.delete-card {
+  visibility: hidden;
+  margin: 10px;
+  float: right;
+}
+
+// .list-box:hover .delete-list, .list-box:hover .add-card{
+//   visibility: visible;;
+// }
+//
+// .delete-list {
+//   visibility: hidden;
+// }
+//
+// .add-card {
+//   visibility: hidden;
+// }
+
+#card-checklist {
+  font-size: medium;
+}
+
+#card-order {
+  width: 100px
+}
+#trello_logo {
+  width: 30px;
+  height: auto;
+  padding-bottom: 10px;;
+}
+
+#backlink {
+  color: black;
+  font-size: large;
+}
+
+//sign in and sign up page ///////////////////////////
+
+.signup-header, .signin-header {
+  margin-top: 50px
+}
+.sign-in, .sign-up {
+  height: 250px;
+  width: 500px;
+  background-color: rgba(255,255,255,0.4);
+  border: thin light gray;
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  padding: 30px;
+  font-size: x-large;
+}
+
+#sign-up-button, #sign-in-button {
+  position: absolute;
+  left: 18%;
+  margin-right: 10px;
+  bottom: 22%;
+  width: 150px;
+  height: 50px;
+}
+
+.myclass {
+          height: 40px;
+          position: absolute;
+          border: 2px solid #cdcdcd;
+          border-color: rgba(0,0,0,.14);
+          background-color: white;
+          font-size: 14px;
+          height: 30px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;
+          border:solid 1px gray;
+          padding:10px;
+          margin: 5px;
+          width: 250px;
+          color: black;
+}
+
+.new-board-box {
+  min-height: 500px;
+  border: solid gray;
+//  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  //  background-color: #ccd6dd;
+  background-color: #D0D0D0 ;
+  color: black;
+  width: 300px;
+}
+
+.password {
+  -webkit-text-security: disc;
+}
+
+#sign-in-guest-button {
+  position: absolute;
+  left: 48%;
+  margin-left: 10px;
+  bottom: 22%;
+  width: 150px;
+  height: 50px;
+}
+
+.sign-up-footer {
+  position: absolute;
+  bottom: 15px;
+  left: 33%;
+  font-size: medium;
+}
+/////////////////////////
+//
+input {
+ display: inline-block;
+ height: 34px;
+ padding: 6px 12px;
+ font-size: 14px;
+ line-height: 1.428571429;
+ color: #555555;
+ vertical-align: middle;
+ background-color: #ffffff;
+ border: 1px solid #cccccc;
+ border-radius: 4px;
+ -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+ -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+         transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+input:focus {
+ border-color: #66afe9;
+ outline: 0;
+ -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.new-card-form {
+  color: black;
+  padding: 15%;
+  width: 200px;
+  font-size: medium;
+}
+
+input[type=checkbox] {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: gray;
+  height: 150px;
+  color: white;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.footer-content {
+  color: white;
+  padding: 30px;
+}
+
+.footer-content a {
+  color: white;
+}
+
+.footer-content ul {
+  list-style: none;
+}
+
+.user-drop-down {
+  height: 40px;
+  margin-top: 7px;
+}
+
+.tab-header {
+  height: 50px;
+  font-weight: 900;
+  font-size: large;
+  line-height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 6px 6px 0 0;
+}

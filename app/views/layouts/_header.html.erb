@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container container-fluid">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    </div>
+
+
+<!-- main navbar on top of page-->
+<div class="collapse navbar-collapse pull-left" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav nav-pills nav-links">
+    <li><a class="navbar-brand" href="#"><img src= "http://blog.lookthink.com/wp-content/uploads/2012/09/Trello_logo.png" id="trello_logo"> Trello Clone </a></li>
+    <!-- <li><a></a></li><li><a></a></li> -->
+    <li><a href="#" id="rent-a-cat-link" class="navbar-link">My Boards</a></li>
+    <!-- <li><a href="/contact" id="contact-link" class="navbar-link">Contact</a></li>
+    <li><a href="/about" id="about-us-link" class="navbar-link">About Us</a></li> -->
+
+  </ul>
+</div>
+
+
+
+  <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+    <% if signed_in? %>
+    <!-- dropdown button-->
+    <div class="dropdown pull-right">
+      <button class="btn btn-primary dropdown-toggle user-drop-down"
+              type="button"
+              id="user-drop-down"
+              data-toggle="dropdown">
+              <%= current_user.email %>
+              <span class="caret"></span>
+      </button>
+
+      <!-- items in the dropdown-->
+       <ul class="dropdown-menu"
+          role="menu"
+          aria-labelledby="dropdownMenu1">
+        <li>
+          <a href="#" id="my-boards">
+          <i class="glyphicon glyphicon-user"></i> My Boards
+          </a>
+        <li>
+          <%= link_to "Sign out", session_url, method: :delete %>
+        </li>
+      </ul>
+    </div>
+
+    <% else %>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Log in", new_session_url %></li>
+      <li><%= link_to "Sign up", new_user_url %></li>
+    </ul>
+    <% end %>
+  </div>
+</div>
+</nav>
+
+
+
+
+
+<% if flash[:errors] %>
+<div class="alert alert-warning alert-dismissible" role="alert">
+   <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<%= flash[:errors].join("<br>") %>
+</div>
+<% end %>
