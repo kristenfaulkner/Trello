@@ -19,6 +19,7 @@
 #main {
 
   width: 80%;
+  overflow-y: scroll;
 }
 .boards {
   margin-top: 40px
@@ -66,7 +67,7 @@ h1, h2, h3, h4 {
   // background-color: #D0D0DD ;
   color: black;
   width: 340px;
-  overflow-y: scroll;
+
 }
 
 .nav-links > li {
