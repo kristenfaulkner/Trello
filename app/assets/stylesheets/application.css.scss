@@ -25,6 +25,7 @@
 }
 body {
   padding-top: 50px;
+  position: relative;
   //font-family: "proxima nova";
   font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
   background-color: #256a92;
@@ -33,9 +34,6 @@ body {
 //  color: white;
 }
 
-.backdrop {
-	overflow: scroll;
-}
 .backlink {
   color: white;
 }
